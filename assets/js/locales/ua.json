@@ -1,0 +1,8 @@
+{
+  "character": {
+    "title": "Character",
+    "inputs": {
+      "character_name": "Character name"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div
+  data-controller="multi-toggle"
+  data-multi-toggle-hidden-class="hidden"
+  data-multi-toggle-states-value='{{ include.states | jsonify }}'
+  class="flex items-center justify-center {{ include.class_names }}"
+>
+  <input type="hidden" id={{ include.id }} data-multi-toggle-target="input">
+  <button
+    data-action="click->multi-toggle#toggle"
+    class="hover:scale-110 focus:scale-110 duration-300 w-6 h-6 flex justify-center items-center"
+    aria-label="Value toggle"
+  >
+    {% for icon in include.icons %}
+      {% assign icon_path = "shared/icons/" | append: icon | append: ".svg" %}
+      <span data-multi-toggle-target="state" class="hidden">
+        {% include {{ icon_path }} width="16" height="16" %}
+      </span>
+    {% endfor %}
+  </button>
+</div>

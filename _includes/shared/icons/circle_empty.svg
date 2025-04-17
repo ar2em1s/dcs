@@ -1,0 +1,19 @@
+<svg
+	version="1.2"
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 128 128"
+	width="{{ include.width }}"
+	height="{{ include.height }}"
+>
+	<path
+		fill="none"
+		stroke="currentColor"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="16"
+		d="
+			m63.5 120c-31.2 0-56.5-25.3-56.5-56.5 0-31.2 25.3-56.5 56.5-56.5 31.2 0 56.5 25.3 56.5 56.5 0 31.2-25.3 56.5-56.5
+			56.5z
+		"
+	/>
+</svg>

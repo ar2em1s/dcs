@@ -1,0 +1,36 @@
+{% assign strength_abilities = "athletics" | split: "," %}
+{% assign dexterity_abilities = "acrobatics,sleight_of_hand,stealth" | split: "," %}
+{% assign intelligence_abilities = "arcana,history,investigation,nature,religion" | split: "," %}
+{% assign wisdom_abilities = "animal_handling,insight,medicine,perception,survival" | split: "," %}
+{% assign charisma_abilities = "deception,intimidation,performance,persuasion" | split: "," %}
+
+
+{% include specs/card.html
+    id="strength"
+    abilities=strength_abilities
+    class_names=include.class_names
+%}
+{% include specs/card.html
+    id="dexterity"
+    abilities=dexterity_abilities
+    class_names=include.class_names
+%}
+{% include specs/card.html
+    id="constitution"
+    class_names=include.class_names
+%}
+{% include specs/card.html
+    id="intelligence"
+    abilities=intelligence_abilities
+    class_names=include.class_names
+%}
+{% include specs/card.html
+    id="wisdom"
+    abilities=wisdom_abilities
+    class_names=include.class_names
+%}
+{% include specs/card.html
+    id="charisma"
+    abilities=charisma_abilities
+    class_names=include.class_names
+%}

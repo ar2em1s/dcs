@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<main class="px-6 py-8 grid grid-cols-24 xl:grid-cols-36 xl:grid-flow-cols gap-3 text-base">
+  {% include character.html class_names="col-span-full lg:col-span-6 lg:row-span-2 xl:col-span-6" %}
+  {% include specs.html class_names="col-span-12 sm:col-span-8 md:col-span-6 md:row-span-2 lg:row-span-1 xl:col-span-5" %}
+  {% include stats.html class_names="col-span-8 md:col-span-4 lg:col-span-3 xl:col-span-5" %}
+  {% include hp_block.html class_names="col-span-full lg:col-span-6 lg:row-span-2 xl:row-span-1 xl:col-span-8" %}
+  {% include weapons_block.html class_names="col-span-full md:col-span-14 lg:col-span-18" %}
+  {% include weapons_notes.html class_names="col-span-full md:col-span-10 xl:col-span-10" %}
+</main>

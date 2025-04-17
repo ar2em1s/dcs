@@ -1,0 +1,16 @@
+<div
+  class="
+    border-4 border-stone-600 dark:border-slate-500 rounded-lg px-1 py-3 flex flex-col justify-between
+    {{ include.class_names }}
+  "
+>
+  <h1
+    class="text-lg text-center font-bold"
+    data-i18n-target="translation" data-t="{{ include.title }}"
+  >
+  </h1>
+
+  <div class="px-2">
+    {% include shared/big_input.html id=include.id input_class_names="text-center" %}
+  </div>
+</div>

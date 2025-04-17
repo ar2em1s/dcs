@@ -1,0 +1,21 @@
+title: DCS
+url: ar2em1s.github.io
+baseurl: /dcs
+github_username: ar2em1s
+
+exclude:
+  - .github
+  - assets/css
+  - assets/js
+  - build/index.css
+  - .gitignore
+  - .gitmodules
+  - .rubocop.yml
+  - .tool-versions
+  - LICENCE.txt
+  - package.json
+  - README.md
+  - tailwind.config.js
+  - yarn.lock
+  - lefthook.yml
+  - workbox-config.js
