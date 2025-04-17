@@ -6,6 +6,11 @@ const DARK_MODE_STATES = {
   disabled: 'false'
 }
 
+const THEME_COLORS = {
+  [DARK_MODE_STATES.enabled]: '#1c1618',
+  [DARK_MODE_STATES.disabled]: '#f5f5f5'
+}
+
 export default class extends Controller {
   static targets = ['body', 'toggle']
   static classes = ['darkMode', 'darkModeEnabled']
@@ -30,5 +35,8 @@ export default class extends Controller {
 
     this.bodyTarget.classList.toggle(this.darkModeClass, enabled)
     this.toggleTarget.classList.toggle(this.darkModeEnabledClass, enabled)
+
+    const themeMetaTag = document.querySelector('meta[name=theme-color]')
+    themeMetaTag.content = THEME_COLORS[this.darkModeCookie]
   }
 }
