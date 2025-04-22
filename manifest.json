@@ -1,8 +1,8 @@
 {
   "name": "DCS",
   "short_name": "DCS",
-  "theme_color": "#d6d6db",
-  "background_color": "#d6d6db",
+  "theme_color": "#27272a",
+  "background_color": "#27272a",
   "display": "standalone",
   "scope": "/",
   "start_url": "/dcs/",
