@@ -8,11 +8,11 @@
   {% assign spell_slots_input_id = spell_slots_prefix | append: "total" %}
 
   <div class="flex flex-col gap-1 {{ include.class_names }}">
-    <h3 class="font-semibold">
+    <h2 class="font-semibold">
       <span
           data-i18n-target="translation" data-t="spellcasting.spell_slots.level"
       ></span> {{ level }}
-    </h3>
+    </h2>
     <div class="flex flex-col gap-1">
       {%
         include shared/input.html
