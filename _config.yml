@@ -7,7 +7,7 @@ exclude:
   - .github
   - assets/css
   - assets/js
-  - build/index.css
+  - build
   - .gitignore
   - .gitmodules
   - .rubocop.yml

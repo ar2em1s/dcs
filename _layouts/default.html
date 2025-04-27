@@ -14,7 +14,7 @@
     <link rel="icon" href="{{ '/assets/img/favicons/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ '/assets/img/favicons/apple-touch-icon.png' | relative_url }}">
 
-    <script src="{{ '/build/index.js' | relative_url }}" async></script>
+    {% inline_js build/index.js %}
     {% inline_css build/index.css %}
   </head>
   <body
