@@ -14,6 +14,9 @@
   <input
     id="{{ include.id }}"
     type="file"
+    {% if include.accept %}
+      accept="{{ include.accept }}"
+    {% endif %}
     class="hidden"
     focus="false"
     aria-label="{{ include.label }}"
