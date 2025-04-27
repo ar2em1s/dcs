@@ -51,7 +51,7 @@
         <div class="border dark:border-stone-600 w-full"></div>
 
         {% for ability in include.abilities %}
-          {% assign proficiency_id = include.ability | append: "_proficiency" %}
+          {% assign proficiency_id = ability | append: "_proficiency" %}
           {% assign label = "specs.abilities.names." | append: ability %}
 
           <div class="flex items-start">
