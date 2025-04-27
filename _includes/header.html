@@ -1,0 +1,42 @@
+<div class="
+  bg-neutral-100 dark:bg-zinc-800 duration-800
+  border-b-3 border-stone-600 dark:border-stone-600 px-3 py-2
+  flex items-center justify-between
+  "
+>
+  <div class="flex items-center justify-between gap-2">
+    <a
+      href="{{ '/' | relative_url }}"
+      aria-label="Link to the home page"
+      class="w-12 h-12 hover:scale-110 duration-300 flex items-center"
+    >
+      {% include shared/icons/logo.svg width="48" height="48" %}
+    </a>
+    <a
+      href="https://github.com/ar2em1s/dcs"
+      aria-label="Link to the project Github"
+      class="border-2 rounded-md border-stone-600 dark:border-stone-600 hover:scale-110 duration-300"
+    >
+      {% include shared/icons/github_badge.svg width="126" height="20" %}
+    </a>
+  </div>
+  <div class="flex items-center justify-between gap-2">
+    <button
+      data-i18n-target="toggle"
+      data-action="click->i18n#toggle"
+      class="duration-300 hover:scale-110 flex justify-center items-center cursor-pointer"
+      aria-label="Locale switcher"
+    >
+      {% include shared/icons/locale.svg width="48" height="48" %}
+    </button>
+
+    <button
+      data-theme-target="toggle"
+      data-action="click->theme#toggle"
+      class="-rotate-90 duration-300 hover:scale-110 flex justify-center items-center cursor-pointer"
+      aria-label="Theme switcher"
+    >
+      {% include shared/icons/day_night.svg width="48" height="48" %}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div
+  data-controller="multi-toggle"
+  {% if include.data_action %}
+    data-action="{{ include.data_action }}"
+  {% else %}
+    data-action="multi-toggle:change->state#save state:loaded@window->multi-toggle#load"
+  {% endif %}
+  data-multi-toggle-hidden-class="hidden"
+  data-multi-toggle-states-value='{{ include.states | jsonify }}'
+  data-multi-toggle-id-value='{{ include.id }}'
+  class="flex items-center justify-center {{ include.class_names }}"
+>
+  <button
+    data-action="click->multi-toggle#toggle"
+    class="
+      hover:scale-105 focus:scale-105 active:scale-95 duration-300 h-6 cursor-pointer
+      {% unless include.label %}
+        w-6
+      {% endunless %}
+    "
+    aria-label="Value toggle"
+  >
+    <span class="flex gap-0.5 justify-center items-center">
+      {% for icon in include.icons %}
+        {% assign icon_path = "shared/icons/" | append: icon | append: ".svg" %}
+        <span data-multi-toggle-target="state" class="hidden">
+          {% include {{ icon_path }} width="16" height="16" %}
+        </span>
+      {% endfor %}
+
+      {% if include.label %}
+        <span data-i18n-target="translation" data-t="{{ include.label }}"></span>
+      {% endif %}
+    </span>
+  </button>
+</div>

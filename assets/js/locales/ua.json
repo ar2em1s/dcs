@@ -1,0 +1,181 @@
+{
+  "page_not_found": {
+    "404": "404",
+    "title": "Сторінку не знайдено :(",
+    "description": "Запитану сторінку не знайдено."
+  },
+  "menu": {
+    "new": "Створити",
+    "import": "Імпортувати",
+    "export": "Експортувати",
+    "export_all": "Експортувати всіх",
+    "clone": "Клонувати",
+    "deletion": {
+      "confirmation": "Я підтверджую",
+      "label": "Видалити"
+    },
+    "characters": {
+      "label": "Персонажі",
+      "character_sheet_name_label": "Имʼя листа",
+      "default_character_sheet_name": "Безіменний"
+    }
+  },
+  "character": {
+    "title": "Персонаж",
+    "inputs": {
+      "player_name": "Ім’я гравця",
+      "character": {
+        "name": "Ім’я",
+        "race": "Раса",
+        "class": "Клас",
+        "level": "Рівень",
+        "background": "Передісторія",
+        "alignment": "Світогляд",
+        "experience_points": "Досвід"
+      }
+    }
+  },
+  "stats": {
+    "hp": {
+      "title": "Очки здоров’я",
+      "current": "Поточні",
+      "temporary": "Тимчасові",
+      "maximum": "Максимум"
+    },
+    "hit_dice": {
+      "title": "Кістки здоров’я",
+      "label": "Кістки",
+      "spent": "Витрачено",
+      "maximum": "Максимум"
+    },
+    "death_saves": {
+      "title": "Ряткидки від смерті",
+      "successes": "Успіхи:",
+      "failures": "Невдачі:"
+    },
+    "armor_class": "Клас броні",
+    "initiative": "Ініціатива",
+    "speed": "Швидкість",
+    "passive_perception": "Пасивна уважність",
+    "proficiency_bonus": "Бонус майстерності",
+    "inspiration": "Героїчне натхнення"
+  },
+  "specs": {
+    "modifier": "Модифікатор",
+    "score": "Значення",
+    "saving_throw": "Ряткидок",
+    "names": {
+      "strength": "Сила",
+      "dexterity": "Спритність",
+      "constitution": "Витривалість",
+      "intelligence": "Інтелект",
+      "wisdom": "Мудрість",
+      "charisma": "Харизма"
+    },
+    "abilities": {
+      "names": {
+        "athletics": "Атлетика",
+        "acrobatics": "Акробатика",
+        "sleight_of_hand": "Спритність рук",
+        "stealth": "Непомітність",
+        "arcana": "Магія",
+        "history": "Історія",
+        "investigation": "Розслідування",
+        "nature": "Природа",
+        "religion": "Релігія",
+        "animal_handling": "Догляд за тваринами",
+        "insight": "Здогадливість",
+        "medicine": "Медицина",
+        "perception": "Уважність",
+        "survival": "Виживання",
+        "deception": "Обман",
+        "intimidation": "Залякування",
+        "performance": "Виступ",
+        "persuasion": "Переконання"
+      }
+    }
+  },
+  "weapons": {
+    "title": "Зброя",
+    "items": {
+      "name": "Назва",
+      "attack_bonus": "Бонус атаки",
+      "damage": "Шкода",
+      "damage_type": "Тип шкоди"
+    },
+    "weapons_amount": "Кількість зброї",
+    "notes": {
+      "title": "Примітки до зброї"
+    }
+  },
+  "spellcasting": {
+    "stats": {
+      "title": "Чаклунство",
+      "spellcasting_ability": "Характеристика",
+      "spellcasting_modifier": "Модифікатор",
+      "spell_save_dc": "Cк ряткидку",
+      "spell_atack_bonus": "Бонус атаки"
+    },
+    "spell_slots": {
+      "title": "Комірки заклять",
+      "level": "Рівень",
+      "total": "Усього"
+    },
+    "spells": {
+      "title": "Закляття та замовляння",
+      "items": {
+        "level": "Рівень",
+        "name": "Назва",
+        "concentration": "Концентрація",
+        "ritual": "Ритуал",
+        "components": {
+          "title": "Компоненти",
+          "verbal": "В",
+          "somatic": "С",
+          "material": "М"
+        },
+        "notes": "Примітки"
+      },
+      "spells_amount": "Кількість заклять"
+    }
+  },
+  "proficiencies": {
+    "title": "Володіння",
+    "armor_training": {
+      "title": "Володіння бронею",
+      "light": "Легка",
+      "medium": "Середня",
+      "heavy": "Важка",
+      "shields": "Щити"
+    },
+    "weapons": "Зброя",
+    "tools": "Інструменти",
+    "languages": "Мови"
+  },
+  "inventory": {
+    "title": "Інвентар",
+    "weight": "Вага",
+    "max_weight": "Макс. вага"
+  },
+  "coins": {
+    "title": "Монети",
+    "types": {
+      "cp": "ММ",
+      "sp": "СМ",
+      "ep": "ЕМ",
+      "gp": "ЗМ",
+      "pp": "ПМ"
+    }
+  },
+  "features_traits_feats": {
+    "title": "Особливості, риси та досягнення"
+  },
+  "backstory_and_appearance": {
+    "title": "Передісторія та зовнішність",
+    "appearance": "Зовнішність",
+    "backstory": "Передісторія"
+  },
+  "notes": {
+    "title": "Нотатки"
+  }
+}

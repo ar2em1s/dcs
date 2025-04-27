@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="Web version of the DND Character sheet">
+    <meta name="theme-color" content="#d6d6db" />
+
+    <title>{{ site.title }}</title>
+
+    <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+    <link rel="icon" href="{{ '/assets/img/favicons/favicon.ico' | relative_url }}" sizes="32x32">
+    <link rel="icon" href="{{ '/assets/img/favicons/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/assets/img/favicons/apple-touch-icon.png' | relative_url }}">
+
+    <script src="{{ '/build/index.js' | relative_url }}" async></script>
+    {% inline_css build/index.css %}
+  </head>
+  <body
+    class="
+      bg-[#d6d6db] dark:bg-zinc-900 text-stone-900 dark:text-slate-200
+      h-screen
+      flex flex-col
+      dark duration-800
+    "
+    data-controller="theme i18n"
+    data-theme-target="body"
+    data-theme-dark-mode-class="dark"
+    data-theme-dark-mode-enabled-class="rotate-270"
+    data-i18n-toggled-class="rotate-y-180"
+  >
+    {% include header.html %}
+    {{ content }}
+  </body>
+</html>

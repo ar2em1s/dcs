@@ -1,0 +1,77 @@
+{% assign column_1_levels = (1..3) %}
+{% assign column_1_spell_slots = "4,3,3" | split: "," %}
+{% assign column_2_levels = (4..6) %}
+{% assign column_2_spell_slots = "3,3,2" | split: "," %}
+{% assign column_3_levels = (7..9) %}
+{% assign column_3_spell_slots = "2,1,1" | split: "," %}
+
+<div
+  class="
+    bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg px-3 p-3
+    grid grid-cols-9 sm:grid-cols-10 xl:grid-cols-12 gap-4
+    {{ include.class_names }}
+  "
+>
+  <div class="grid grid-cols-9 sm:grid-cols-10 lg:grid-cols-9 xl:grid-cols-12 gap-2 col-span-full xl:col-span-3">
+    <h1
+      class="text-xl font-bold col-span-full"
+      data-i18n-target="translation" data-t="spellcasting.stats.title"
+    >
+    </h1>
+
+    {%
+      include shared/big_input.html
+        id="spellcasting_ability"
+        class_names="col-span-5 sm:col-span-3 md:col-span-2 lg:col-span-3 xl:col-span-6"
+        label="spellcasting.stats.spellcasting_ability"
+    %}
+    {%
+      include shared/big_input.html
+        id="spellcasting_modifier"
+        label="spellcasting.stats.spellcasting_modifier"
+        class_names="col-span-4 sm:col-span-2 sm:col-start-5 lg:col-span-2 lg:col-start-7 xl:col-span-5 xl:col-start-8"
+        input_class_names="text-center"
+    %}
+    {%
+      include shared/big_input.html
+        id="spell_save_dc"
+        label="spellcasting.stats.spell_save_dc"
+        class_names="col-span-4 sm:col-span-2 lg:col-span-2 lg:col-start-1 xl:col-span-5 xl:col-start-auto"
+        input_class_names="text-center"
+    %}
+    {%
+      include shared/big_input.html
+      id="spell_atack_bonus"
+      label="spellcasting.stats.spell_atack_bonus"
+      class_names="col-span-4 col-start-6 sm:col-start-auto sm:col-span-2 lg:col-span-2 lg:col-start-7 xl:col-span-5 xl:col-start-8"
+      input_class_names="text-center"
+    %}
+  </div>
+  <div class="grid grid-cols-subgrid col-span-full xl:col-span-9 gap-y-2">
+    <h1
+      class="text-xl font-bold col-span-full"
+      data-i18n-target="translation" data-t="spellcasting.spell_slots.title"
+    >
+    </h1>
+
+    {%
+      include spellcasting/spell_slots_block.html
+        levels=column_1_levels
+        spell_slots=column_1_spell_slots
+        class_names="col-span-3 sm:col-span-2 xl:col-span-1"
+    %}
+    {%
+      include spellcasting/spell_slots_block.html
+        levels=column_2_levels
+        spell_slots=column_2_spell_slots
+        class_names="col-span-3 sm:col-span-2 xl:col-span-1"
+    %}
+    {%
+      include spellcasting/spell_slots_block.html
+        levels=column_3_levels
+        spell_slots=column_3_spell_slots
+        class_names="col-span-3 sm:col-span-2 xl:col-span-1"
+    %}
+  </div>
+</div>

@@ -1,0 +1,181 @@
+{
+  "page_not_found": {
+    "404": "404",
+    "title": "Page not found :(",
+    "description": "The requested page could not be found."
+  },
+  "menu": {
+    "new": "New",
+    "import": "Import",
+    "export": "Export",
+    "export_all": "Export all",
+    "clone": "Clone",
+    "deletion": {
+      "confirmation": "I confirm",
+      "label": "Delete"
+    },
+    "characters": {
+      "label": "Characters",
+      "character_sheet_name_label": "Sheet name",
+      "default_character_sheet_name": "Unnamed"
+    }
+  },
+  "character": {
+    "title": "Character",
+    "inputs": {
+      "player_name": "Player name",
+      "character" : {
+        "name": "Name",
+        "race": "Race",
+        "class": "Class",
+        "level": "Level",
+        "background": "Background",
+        "alignment": "Alignment",
+        "experience_points": "XP"
+      }
+    }
+  },
+  "stats": {
+    "hp": {
+      "title": "Hit points",
+      "current": "Current",
+      "temporary": "Temp",
+      "maximum": "Max"
+    },
+    "hit_dice": {
+      "title": "Hit dice",
+      "label": "Dice",
+      "spent": "Spent",
+      "maximum": "Max"
+    },
+    "death_saves": {
+      "title": "Death saves",
+      "successes": "Successes:",
+      "failures": "Failures:"
+    },
+    "armor_class": "Armor class",
+    "initiative": "Initiative",
+    "speed": "Speed",
+    "passive_perception": "Passive perception",
+    "proficiency_bonus": "Proficiency bonus",
+    "inspiration": "Heroic inspiration"
+  },
+  "specs": {
+    "modifier": "Modifier",
+    "score": "Score",
+    "saving_throw": "Saving throw",
+    "names": {
+      "strength": "Strength",
+      "dexterity": "Dexterity",
+      "constitution": "Constitution",
+      "intelligence": "Intelligence",
+      "wisdom": "Wisdom",
+      "charisma": "Charisma"
+    },
+    "abilities": {
+      "names": {
+        "athletics": "Athletics",
+        "acrobatics": "Acrobatics",
+        "sleight_of_hand": "Sleight of hand",
+        "stealth": "Stealth",
+        "arcana": "Arcana",
+        "history": "History",
+        "investigation": "Investigation",
+        "nature": "Nature",
+        "religion": "Religion",
+        "animal_handling": "Animal handling",
+        "insight": "Insight",
+        "medicine": "Medicine",
+        "perception": "Perception",
+        "survival": "Survival",
+        "deception": "Deception",
+        "intimidation": "Intimidation",
+        "performance": "Performance",
+        "persuasion": "Persuasion"
+      }
+    }
+  },
+  "weapons": {
+    "title": "Weapons",
+    "items": {
+      "name": "Name",
+      "attack_bonus": "Atk bonus",
+      "damage": "Damage",
+      "damage_type": "Damage type"
+    },
+    "weapons_amount": "Weapons amount",
+    "notes": {
+      "title": "Weapon notes"
+    }
+  },
+  "spellcasting": {
+    "stats": {
+      "title": "Spellcasting",
+      "spellcasting_ability": "Ability",
+      "spellcasting_modifier": "Modifier",
+      "spell_save_dc": "Save DC",
+      "spell_atack_bonus": "Atk bonus"
+    },
+    "spell_slots": {
+      "title": "Spell slots",
+      "level": "Level",
+      "total": "Total"
+    },
+    "spells": {
+      "title": "Spells & Cantrips",
+      "items": {
+        "level": "Level",
+        "name": "Name",
+        "concentration": "Concentration",
+        "ritual": "Ritual",
+        "components": {
+          "title": "Materials",
+          "verbal": "V",
+          "somatic": "S",
+          "material": "M"
+        },
+        "notes": "Notes"
+      },
+      "spells_amount": "Spells amount"
+    }
+  },
+  "proficiencies": {
+    "title": "Proficiencies",
+    "armor_training": {
+      "title": "Armor training",
+      "light": "Light",
+      "medium": "Medium",
+      "heavy": "Heavy",
+      "shields": "Shields"
+    },
+    "weapons": "Weapons",
+    "tools": "Tools",
+    "languages": "Languages"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "weight": "Weight",
+    "max_weight": "Max weight"
+  },
+  "coins": {
+    "title": "Coins",
+    "types": {
+      "cp": "CP",
+      "sp": "SP",
+      "ep": "EP",
+      "gp": "GP",
+      "pp": "PP"
+    }
+  },
+  "features_traits_feats": {
+    "title": "Features, traits & feats"
+  },
+  "backstory_and_appearance": {
+    "title": "Backstory and appearance",
+    "appearance": "Appearance",
+    "backstory": "Backstory"
+  },
+  "notes": {
+    "title": "For notes"
+  }
+}

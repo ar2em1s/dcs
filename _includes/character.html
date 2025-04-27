@@ -1,0 +1,42 @@
+<div
+  class="
+  bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg p-3
+    flex flex-col justify-around gap-3
+    {{ include.class_names }}
+  "
+>
+  <h1
+    class="text-xl text-center font-bold"
+    data-i18n-target="translation" data-t="character.title"
+  >
+  </h1>
+  <div class="flex flex-wrap justify-around gap-3">
+    <div class="flex flex-col gap-3 grow">
+      {% include shared/input.html id="character_name" label="character.inputs.character.name" %}
+      {% include shared/input.html id="player_name" label="character.inputs.player_name" %}
+    </div>
+    <div class="flex flex-col gap-3 grow">
+      {% include shared/input.html id="character_race" label="character.inputs.character.race" %}
+      {% include shared/input.html id="character_class" label="character.inputs.character.class" %}
+    </div>
+    <div class="flex flex-col gap-3 grow">
+      {% include shared/input.html id="character_background" label="character.inputs.character.background"%}
+      {% include shared/input.html id="character_alignment" label="character.inputs.character.alignment" %}
+    </div>
+    <div class="flex gap-4">
+      {%
+        include shared/input.html
+          id="character_level"
+          label="character.inputs.character.level"
+          class_names="flex-2/3"
+      %}
+      {%
+        include shared/input.html
+          id="character_experience_points"
+          label="character.inputs.character.experience_points"
+          class_names="flex-1/3"
+      %}
+    </div>
+  </div>
+</div>

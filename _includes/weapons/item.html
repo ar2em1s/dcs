@@ -1,0 +1,38 @@
+{% assign weapon_name_id = include.id | append: "_name" %}
+{% assign weapon_attack_bonus_id = include.id | append: "_attack_bonus" %}
+{% assign weapon_damage_id = include.id | append: "_damage" %}
+{% assign weapon_damage_type_id = include.id | append: "_damage_type" %}
+
+<div
+  class="
+    border-b-3 border-t-3 dark:border-stone-600 rounded-lg p-2
+    grid grid-cols-10 gap-2
+    {{ include.class_names }}
+  "
+  data-pagination-target="item"
+>
+  {%
+    include shared/input.html
+    id=weapon_name_id
+    label="weapons.items.name"
+    class_names="col-span-6 lg:col-span-4"
+  %}
+  {%
+    include shared/input.html
+    id=weapon_attack_bonus_id
+    label="weapons.items.attack_bonus"
+    class_names="col-span-4 lg:col-span-2"
+  %}
+  {%
+    include shared/input.html
+    id=weapon_damage_id
+    label="weapons.items.damage"
+    class_names="col-span-5 lg:col-span-2"
+  %}
+  {%
+    include shared/input.html
+    id=weapon_damage_type_id
+    label="weapons.items.damage_type"
+    class_names="col-span-5 lg:col-span-2"
+  %}
+</div>

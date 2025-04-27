@@ -1,0 +1,182 @@
+{
+  "page_not_found": {
+    "404": "404",
+    "title": "Страница не найдена :(",
+    "description": "Запрашиваемая страница не найдена."
+  },
+  "menu": {
+    "new": "Создать",
+    "import": "Импортировать",
+    "export": "Експортировать",
+    "export_all": "Експортировать всех",
+    "clone": "Клонировать",
+    "delete": "Удалить",
+    "deletion": {
+      "confirmation": "Я подтверждаю",
+      "label": "Удалить"
+    },
+    "characters": {
+      "label": "Персонажи",
+      "character_sheet_name_label": "Имя листа",
+      "default_character_sheet_name": "Безымянный"
+    }
+  },
+  "character": {
+    "title": "Персонаж",
+    "inputs": {
+      "player_name": "Имя игрока",
+      "character": {
+        "name": "Имя",
+        "race": "Раса",
+        "class": "Класс",
+        "level": "Уровень",
+        "background": "Предыстория",
+        "alignment": "Мировоззрение",
+        "experience_points": "Опыт"
+      }
+    }
+  },
+  "stats": {
+    "hp": {
+      "title": "Очки здоровья",
+      "current": "Текущие",
+      "temporary": "Временные",
+      "maximum": "Максимум"
+    },
+    "hit_dice": {
+      "title": "Кости здоровья",
+      "label": "Кости",
+      "spent": "Потрачено",
+      "maximum": "Максимум"
+    },
+    "death_saves": {
+      "title": "Спасброски от смерти",
+      "successes": "Успехи:",
+      "failures": "Провалы:"
+    },
+    "armor_class": "Класс доспеха",
+    "initiative": "Инициатива",
+    "speed": "Скорость",
+    "passive_perception": "Пассивное восприятие",
+    "proficiency_bonus": "Бонус мастерства",
+    "inspiration": "Героическое вдохновение"
+  },
+  "specs": {
+    "modifier": "Модификатор",
+    "score": "Значение",
+    "saving_throw": "Спасбросок",
+    "names": {
+      "strength": "Сила",
+      "dexterity": "Ловкость",
+      "constitution": "Телосложение",
+      "intelligence": "Интеллект",
+      "wisdom": "Мудрость",
+      "charisma": "Харизма"
+    },
+    "abilities": {
+      "names": {
+        "athletics": "Атлетика",
+        "acrobatics": "Акробатика",
+        "sleight_of_hand": "Ловкость рук",
+        "stealth": "Скрытность",
+        "arcana": "Магия",
+        "history": "История",
+        "investigation": "Расследование",
+        "nature": "Природа",
+        "religion": "Религия",
+        "animal_handling": "Уход за животными",
+        "insight": "Проницательность",
+        "medicine": "Медицина",
+        "perception": "Восприятие",
+        "survival": "Выживание",
+        "deception": "Обман",
+        "intimidation": "Запугивание",
+        "performance": "Выступление",
+        "persuasion": "Убеждение"
+      }
+    }
+  },
+  "weapons": {
+    "title": "Оружие",
+    "items": {
+      "name": "Название",
+      "attack_bonus": "Бонус атаки",
+      "damage": "Урон",
+      "damage_type": "Тип урона"
+    },
+    "weapons_amount": "Количество оружия",
+    "notes": {
+      "title": "Примечания к оружию"
+    }
+  },
+  "spellcasting": {
+    "stats": {
+      "title": "Магия",
+      "spellcasting_ability": "Характеристика",
+      "spellcasting_modifier": "Модификатор",
+      "spell_save_dc": "Сл спасброска",
+      "spell_atack_bonus": "Бонус атаки"
+    },
+    "spell_slots": {
+      "title": "Ячейки заклинаний",
+      "level": "Уровень",
+      "total": "Всего"
+    },
+    "spells": {
+      "title": "Заклинания и заговоры",
+      "items": {
+        "level": "Уровень",
+        "name": "Название",
+        "concentration": "Концентрация",
+        "ritual": "Ритуал",
+        "components": {
+          "title": "Компоненты",
+          "verbal": "В",
+          "somatic": "С",
+          "material": "М"
+        },
+        "notes": "Примечания"
+      },
+      "spells_amount": "Количество заклинаний"
+    }
+  },
+  "proficiencies": {
+    "title": "Владения",
+    "armor_training": {
+      "title": "Владение доспехами",
+      "light": "Лёгкие",
+      "medium": "Средние",
+      "heavy": "Тяжёлые",
+      "shields": "Щиты"
+    },
+    "weapons": "Оружие",
+    "tools": "Инструменты",
+    "languages": "Языки"
+  },
+  "inventory": {
+    "title": "Инвентарь",
+    "weight": "Вес",
+    "max_weight": "Макс. вес"
+  },
+  "coins": {
+    "title": "Монеты",
+    "types": {
+      "cp": "ММ",
+      "sp": "СМ",
+      "ep": "ЭМ",
+      "gp": "ЗМ",
+      "pp": "ПМ"
+    }
+  },
+  "features_traits_feats": {
+    "title": "Черты, особенности и подвиги"
+  },
+  "backstory_and_appearance": {
+    "title": "Предыстория и внешность",
+    "appearance": "Внешность",
+    "backstory": "Предыстория"
+  },
+  "notes": {
+    "title": "Заметки"
+  }
+}

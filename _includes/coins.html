@@ -1,0 +1,36 @@
+{% assign coin_types = "cp,sp,ep,gp,pp" | split: "," %}
+
+<div class="
+  bg-neutral-100 dark:bg-zinc-800 duration-800
+  border-3 border-stone-600 dark:border-stone-600 rounded-lg p-3
+  flex flex-col gap-3
+  {{ include.class_names }}
+"
+>
+  <h1
+    class="text-xl text-center font-bold"
+    data-i18n-target="translation" data-t="coins.title"
+  >
+  </h1>
+  <div class="grid grid-cols-6 gap-3">
+    {% for coin_type in coin_types %}
+      {% assign coin_type_id = coin_type | append: "_coins_amount" %}
+      {% assign label = "coins.types." | append: coin_type %}
+      {% assign class_names = "col-span-2" %}
+
+      {% if forloop.index == 4 %}
+        {% assign class_names = class_names | append: " col-start-2" %}
+      {% endif %}
+
+      <div class="flex items-center justify-center {{ class_names }}">
+        {%
+          include shared/input.html
+          id=coin_type_id
+          label=label
+          class_names="max-w-24"
+          input_class_names="text-center"
+        %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

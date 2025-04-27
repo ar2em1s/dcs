@@ -1,0 +1,23 @@
+<div class="
+    bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg p-3
+    grid grid-cols-1 gap-2
+    {{ include.class_names }}
+  "
+>
+  <h1
+    class="text-xl text-center font-bold col-span-full"
+    data-i18n-target="translation" data-t="proficiencies.title"
+  >
+  </h1>
+
+  {% include proficiencies/armor_training.html class_names="col-span-1" %}
+  {% include proficiencies/item.html id="weapons_proficiency" title="proficiencies.weapons" class_names="col-span-1" %}
+  {% include proficiencies/item.html id="tools_proficiency" title="proficiencies.tools" class_names="col-span-1" %}
+  {%
+    include proficiencies/item.html
+    id="languages_proficiency"
+    title="proficiencies.languages"
+    class_names="col-span-1"
+  %}
+</div>

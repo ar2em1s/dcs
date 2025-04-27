@@ -1,0 +1,24 @@
+<button
+  class="
+    text-center text-gray-900 border-2 rounded-lg border-gray-400
+    dark:text-slate-200 dark:border-gray-500 hover:border-gray-800 dark:hover:border-gray-200
+    dark:active:border-gray-200 active:border-gray-800 active:scale-90 duration-100
+    disabled:cursor-not-allowed disabled:hover:border-gray-400 dark:disabled:hover:border-gray-500
+    disabled:active:scale-100 disabled:text-gray-400 dark:disabled:text-border-gray-400
+    py-1 px-2
+    {{ include.class_names }}
+  "
+  aria-label="{{ include.label }}"
+  {% if include.disabled %}
+    disabled="disabled"
+  {% endif %}
+  data-action="{{ include.data_action }}"
+  {% if include.data_state_export_type_param %}
+    data-state-export-type-param="{{ include.data_state_export_type_param }}"
+  {% endif %}
+  {% if include.data_confirmation_target %}
+    data-confirmation-target="{{ include.data_confirmation_target }}"
+  {% endif %}
+  data-i18n-target="translation"
+  data-t="{{ include.label }}"
+></button>

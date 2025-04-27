@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<main class="
+    px-2 pt-3 pb-8 gap-3 text-base
+    max-w-[1568px] mx-auto
+    grid grid-cols-24 xl:grid-cols-36
+  "
+  data-controller="state"
+  data-state-default-character-sheet-name-value="menu.characters.default_character_sheet_name"
+>
+  {% include menu.html class_names="col-span-full" %}
+  {% include character.html class_names="col-span-full" %}
+  {% include specs.html class_names="col-span-12 sm:col-span-8 lg:col-span-6 lg:row-span-2 xl:row-span-1 " %}
+  {% include stats.html class_names="col-span-12 md:col-span-8 lg:col-span-4 xl:col-span-6" %}
+  {% include health.html class_names="col-span-full lg:col-span-6 xl:col-span-8" %}
+  {% include weapons.html class_names="col-span-full md:col-span-14 lg:col-span-18 xl:col-span-20" %}
+  {% include weapons_notes.html class_names="col-span-full md:col-span-10 lg:col-span-11 xl:col-span-8" %}
+  {% include spellcasting_stats.html class_names="col-span-full md:col-span-full lg:col-span-13 xl:col-span-full" %}
+  {% include spells.html class_names="col-span-full" %}
+  {% include inventory.html class_names="col-span-full sm:row-span-2 sm:col-span-12 lg:col-span-10 xl:col-span-15" %}
+  {% include coins.html class_names="col-span-full sm:col-span-12 lg:col-span-14 xl:col-span-21" %}
+  {% include proficiencies.html class_names="col-span-full sm:col-span-12 lg:col-span-14 xl:col-span-21" %}
+  {% include features_traits_feats.html class_names="col-span-full sm:col-span-12 xl:col-span-18" %}
+  {% include backstory_and_appearance.html class_names="col-span-full sm:col-span-12 xl:col-span-18" %}
+  {% include notes.html class_names="col-span-full row-span-3" %}
+</main>

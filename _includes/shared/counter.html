@@ -1,0 +1,56 @@
+{% assign arrow_class_names = "hover:scale-110 focus:scale-110 active:scale-90 duration-300 cursor-pointer" %}
+{% assign right_arrow_class_names = "rotate-180 " | append: arrow_class_names %}
+
+<div
+  class="flex flex-col flex-auto  {{ include.class_names }}"
+  data-controller="counter"
+  data-counter-id-value="{{ include.id }}"
+  data-counter-positive-prefix-value="+"
+  data-counter-negative-prefix-value="-"
+  data-action="counter:change->state#save state:loaded@window->counter#load"
+>
+  <label
+    for="{{ include.id }}"
+    class="flex-auto text-center"
+    data-i18n-target="translation"
+    data-t="{{ include.label }}"
+  ></label>
+
+  <div
+    class="flex items-center justify-center gap-0.5"
+  >
+    <button
+      class="{{ arrow_class_names }}"
+      aria-label="Minus"
+      data-action="click->counter#tick"
+      data-counter-tick-value-param="-1"
+    >
+      {% include shared/icons/arrow.svg width="24" height="24"%}
+    </button>
+
+    <input
+      type="text"
+      id="{{ include.id }}"
+      class="
+        block px-2 text-center rounded-lg
+        text-gray-900 bg-transparent border-2 border-gray-400
+        dark:text-slate-200 dark:border-gray-500 dark:focus:border-gray-200 focus:outline-none
+        focus:ring-0 focus:border-gray-800
+        {{ include.input_class_names }}
+      "
+      autocomplete="off"
+      readonly="true"
+      aria-label="{{ include.id }}"
+      data-counter-target="input"
+    />
+
+    <button
+      class="{{ right_arrow_class_names }}"
+      aria-label="Plus"
+      data-action="click->counter#tick"
+      data-counter-tick-value-param="1"
+    >
+      {% include shared/icons/arrow.svg width="24" height="24" %}
+    </button>
+  </div>
+</div>

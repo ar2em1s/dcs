@@ -1,0 +1,27 @@
+{% assign notes_amount = 3 %}
+
+<div class="
+    bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg p-3
+    flex flex-col gap-3
+    {{ include.class_names }}
+  "
+>
+  <h1
+    class="text-xl text-center font-bold"
+    data-i18n-target="translation" data-t="notes.title"
+  >
+  </h1>
+  <div class="grid gap-3 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+    {% for index in (1..notes_amount) %}
+      {% assign notes_id = "notes_" | append: index %}
+      {% assign class_names = "col-span-2" %}
+
+      {% if index == 3 %}
+        {% assign class_names = class_names | append: " md:col-start-2 lg:col-start-auto" %}
+      {% endif %}
+
+      {% include shared/text_area.html id=notes_id rows=36 class_names=class_names %}
+    {% endfor %}
+  </div>
+</div>

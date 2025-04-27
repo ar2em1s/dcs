@@ -1,0 +1,13 @@
+{
+  "name": "DCS",
+  "short_name": "DCS",
+  "theme_color": "#27272a",
+  "background_color": "#27272a",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/dcs/",
+  "icons": [
+    { "src": "assets/img/favicons/favicon-192x192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "assets/img/favicons/favicon-512x512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

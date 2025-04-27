@@ -1,0 +1,32 @@
+{% assign toggle_states = "unchecked,checked" | split: "," %}
+{% assign toggle_icons = "circle_empty,circle" | split: "," %}
+
+{% for level in include.levels %}
+  {% assign spell_slots_index = forloop.index | minus: 1 %}
+  {% assign spell_slots_amount = include.spell_slots[spell_slots_index] | minus: 1 %}
+  {% assign spell_slots_prefix = "level_" | append: level | append: "_spell_slots_" %}
+  {% assign spell_slots_input_id = spell_slots_prefix | append: "total" %}
+
+  <div class="flex flex-col gap-1 {{ include.class_names }}">
+    <h3 class="font-semibold">
+      <span
+          data-i18n-target="translation" data-t="spellcasting.spell_slots.level"
+      ></span> {{ level }}
+    </h3>
+    <div class="flex flex-col gap-1">
+      {%
+        include shared/input.html
+        id=spell_slots_input_id
+        label="spellcasting.spell_slots.total"
+        class_names="w-5/12"
+        input_class_names="text-center"
+      %}
+      <div class="flex">
+        {% for index in (0..spell_slots_amount) %}
+          {% assign spell_slot_id = spell_slots_prefix | append: index %}
+          {% include shared/toggle.html id=spell_slot_id states=toggle_states icons=toggle_icons %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endfor %}

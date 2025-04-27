@@ -1,0 +1,35 @@
+<div class="flex items-center gap-2">
+  <label for="{{ include.id }}">
+    <span data-i18n-target="translation" data-t="{{ include.label }}"></span>:
+  </label>
+  <select
+    id="{{ include.id }}"
+    aria-label="{{ include.id }}"
+    class="
+      text-center text-gray-900 bg-transparent border-2 rounded-lg border-gray-400
+      dark:text-slate-200 dark:border-gray-500 dark:focus:border-gray-200 focus:outline-none focus:ring-0
+      hover:border-gray-800 dark:hover:border-gray-200
+      focus:border-gray-800
+      {{ include.input_class_names }}
+    "
+    {% if include.data_pagination_target %}
+      data-pagination-target="{{ include.data_pagination_target }}"
+    {% endif %}
+    {% if include.data_state_target %}
+      data-state-target="{{ include.data_state_target }}"
+    {% endif %}
+    {% if include.data_action %}
+      data-action="{{ include.data_action }}"
+    {% endif %}
+  >
+    {% for option in include.options %}
+      <option
+        class="bg-[#d6d6db] dark:bg-zinc-900 text-stone-900 dark:text-slate-200"
+        value="{{option}}"
+        {% if option == include.selected %}
+          selected
+        {% endif %}
+      >{{ option }}</option>
+    {% endfor %}
+  </select>
+</div>

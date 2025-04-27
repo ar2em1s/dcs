@@ -1,0 +1,87 @@
+{% assign spell_level_id = include.id | append: "_level" %}
+{% assign spell_name_id = include.id | append: "_name" %}
+{% assign spell_concentration_id = include.id | append: "_concentration" %}
+{% assign spell_ritual_id = include.id | append: "_ritual" %}
+{% assign spell_verbal_component_id = include.id | append: "_verbal_component" %}
+{% assign spell_somatic_component_id = include.id | append: "_somatic_component" %}
+{% assign spell_material_component_id = include.id | append: "_material_component" %}
+{% assign spell_notes_id = include.id | append: "_notes" %}
+{% assign toggle_states = "unchecked,checked" | split: "," %}
+{% assign toggle_icons = "circle_empty,circle" | split: "," %}
+
+<div
+  class="
+    border-b-3 border-t-3 dark:border-stone-600 rounded-lg p-2
+    grid grid-cols-20 gap-2
+    {{ include.class_names }}
+  "
+  data-pagination-target="item"
+>
+  {%
+    include shared/input.html
+    id=spell_level_id
+    label="spellcasting.spells.items.level"
+    class_names="col-span-4 sm:col-span-2 md:col-span-4"
+    input_class_names="text-center"
+  %}
+  {%
+    include shared/input.html
+    id=spell_name_id label="spellcasting.spells.items.name"
+    class_names="col-span-16 sm:col-span-18 md:col-span-16"
+  %}
+
+  <div class="
+      col-span-full sm:col-span-10 md:col-span-full 2xl:col-span-10
+      flex gap-2 justify-center items-center
+    "
+  >
+    {%
+      include shared/toggle.html
+      id=spell_concentration_id
+      states=toggle_states
+      icons=toggle_icons
+      label="spellcasting.spells.items.concentration"
+    %}
+    {%
+      include shared/toggle.html
+      id=spell_ritual_id
+      states=toggle_states
+      icons=toggle_icons
+      label="spellcasting.spells.items.ritual"
+    %}
+  </div>
+
+  <div class="
+      col-span-full sm:col-span-10 md:col-span-full 2xl:col-span-10
+      flex gap-2 justify-center items-center
+    "
+  >
+    <h3>
+      <span data-i18n-target="translation" data-t="spellcasting.spells.items.components.title"></span>:
+    </h3>
+
+    {%
+      include shared/toggle.html
+      id=spell_verbal_component_id
+      states=toggle_states
+      icons=toggle_icons
+      label="spellcasting.spells.items.components.verbal"
+    %}
+    {%
+      include shared/toggle.html
+      id=spell_somatic_component_id
+      states=toggle_states
+      icons=toggle_icons
+      label="spellcasting.spells.items.components.somatic"
+    %}
+    {%
+      include shared/toggle.html
+      id=spell_material_component_id
+      states=toggle_states
+      icons=toggle_icons
+      label="spellcasting.spells.items.components.material"
+    %}
+  </div>
+
+  {% include shared/text_area.html id=spell_notes_id class_names="col-span-full" rows=3 %}
+</div>

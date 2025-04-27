@@ -1,0 +1,81 @@
+{% assign toggle_states = "unchecked,checked" | split: "," %}
+{% assign toggle_icons = "circle_empty,circle" | split: "," %}
+
+<div class="
+  bg-neutral-100 dark:bg-zinc-800 duration-800 border-3 border-stone-600 dark:border-stone-600 rounded-lg p-2
+  flex flex-wrap md:flex-nowrap items-center gap-3 justify-center xl:justify-between
+  {{ include.class_names }}
+  "
+>
+  <div class="flex justify-center flex-wrap gap-1">
+    {%
+      include shared/button.html
+      label="menu.new"
+      data_action="click->state#add"
+    %}
+    {%
+      include shared/file_input.html
+      id="character_import"
+      label="menu.import"
+      data_state_target="importInput"
+      data_action="input->state#import"
+    %}
+    {%
+      include shared/button.html
+      label="menu.clone"
+      data_action="click->state#clone"
+    %}
+    {%
+      include shared/button.html
+      label="menu.export"
+      data_action="click->state#export"
+    %}
+    {%
+      include shared/button.html
+      label="menu.export_all"
+      data_action="click->state#export"
+      data_state_export_type_param="all"
+    %}
+
+    <div
+      class="flex flex-wrap gap-1"
+      data-controller="confirmation"
+    >
+      {%
+        include shared/button.html
+        label="menu.deletion.label"
+        disabled=true
+        data_confirmation_target="input"
+        data_action="click->state#delete click->confirmation#reset"
+      %}
+
+      {%
+        include shared/toggle.html
+        id="deletion_confirmation"
+        label="menu.deletion.confirmation"
+        states=toggle_states
+        icons=toggle_icons
+        data_action="multi-toggle:change->confirmation#toggle confirmation:reset@window->multi-toggle#reset"
+      %}
+    </div>
+  </div>
+
+  <div class="w-auto flex flex-wrap gap-2 justify-center items-center">
+    {%
+      include shared/dropdown.html
+      id="characters"
+      label="menu.characters.label"
+      input_class_names="w-52 h-9"
+      data_state_target="charactersDropdown"
+      data_action="change->state#selectCharacter"
+    %}
+    {%
+      include shared/input.html
+      id="character_sheet_name"
+      label="menu.characters.character_sheet_name_label"
+      data_action="input->state#refreshCharactersDropdown"
+      class_names="w-50"
+      input_class_names="text-center"
+    %}
+  </div>
+</div>

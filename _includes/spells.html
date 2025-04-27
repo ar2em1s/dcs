@@ -1,0 +1,46 @@
+{% assign spells_indexes = (1..30) %}
+{% assign pagination_id = "spells_amount" %}
+
+<div class="
+    bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg p-3
+    flex flex-col gap-2
+    {{ include.class_names }}
+  "
+  data-controller="pagination"
+  data-pagination-cookie-prefix-value="spell"
+  data-pagination-hidden-class="hidden"
+  data-pagination-id-value="{{ pagination_id }}"
+  data-action="pagination:change->state#save state:loaded@window->pagination#load"
+>
+  <h1
+    class="text-xl text-center font-bold"
+    data-i18n-target="translation" data-t="spellcasting.spells.title"
+  >
+  </h1>
+
+  <div class="flex items-center justify-center">
+    {%
+      include shared/dropdown.html
+      id=pagination_id
+      label="spellcasting.spells.spells_amount"
+      options=spells_indexes
+      data_pagination_target="input"
+      data_action="change->pagination#update"
+      input_class_names="w-[3rem]"
+    %}
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+    {% for index in spells_indexes %}
+      {% assign spell_id = "spell_" | append: index %}
+      {% assign class_names = "" %}
+
+      {% if index > spells_displayed_default %}
+        {% assign class_names = class_names | append: "hidden" %}
+      {% endif %}
+
+      {% include spellcasting/item.html id=spell_id class_names=class_names %}
+    {% endfor %}
+  </div>
+</div>

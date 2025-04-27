@@ -1,0 +1,70 @@
+{% assign modifier_input_id = include.id | append: "_modifier" %}
+{% assign score_input_id = include.id | append: "_score" %}
+{% assign saving_throw_toggle_states = "none,proficient" | split: "," %}
+{% assign saving_throw_toggle_icons = "circle_empty,circle" | split: "," %}
+{% assign ability_toggle_states = "none,proficient,master" | split: "," %}
+{% assign ability_toggle_icons = "circle_empty,circle,star" | split: "," %}
+
+<div
+  class="
+  bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg py-3 px-0.5
+    flex flex-col gap-3 {{ include.class_names }}
+  "
+>
+  <h1
+    class="text-xl text-center font-bold"
+    data-i18n-target="translation" data-t="specs.names.{{ include.id }}">
+  </h1>
+  <div class="flex flex-col gap-1">
+    <div class="flex flex-col items-center gap-3">
+      {%
+        include shared/counter.html
+        id=modifier_input_id
+        label="specs.modifier"
+        class_names="text-lg"
+        input_class_names="w-1/2"
+      %}
+      {% include shared/input.html
+          id=score_input_id
+          label="specs.score"
+          class_names="w-1/2"
+          input_class_names="text-center"
+      %}
+    </div>
+
+    <div class="border dark:border-stone-600 w-full"></div>
+
+    <div class="flex items-center gap-1">
+      {% assign saving_throw_proficiency_id = include.id | append: "_saving_throw" %}
+      {%
+        include shared/toggle.html
+          id=saving_throw_proficiency_id
+          states=saving_throw_toggle_states
+          icons=saving_throw_toggle_icons
+          class_names="col-span-3"
+      %}
+      <span class="col-span-17 font-semibold" data-i18n-target="translation" data-t="specs.saving_throw"></span>
+    </div>
+
+      {% if include.abilities %}
+        <div class="border dark:border-stone-600 w-full"></div>
+
+        {% for ability in include.abilities %}
+          {% assign proficiency_id = include.ability | append: "_proficiency" %}
+          {% assign label = "specs.abilities.names." | append: ability %}
+
+          <div class="flex items-start">
+            {%
+              include shared/toggle.html
+                id=proficiency_id
+                states=ability_toggle_states
+                icons=ability_toggle_icons
+            %}
+            {% include shared/counter.html id=ability label=label input_class_names="w-1/2" %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

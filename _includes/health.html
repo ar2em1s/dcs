@@ -1,0 +1,75 @@
+{% assign toggle_states = "unchecked,checked" | split: "," %}
+{% assign toggle_icons = "circle_empty,circle" | split: "," %}
+
+<div
+  class="
+    bg-neutral-100 dark:bg-zinc-800 duration-800
+    border-3 border-stone-600 dark:border-stone-600 rounded-lg px-3 p-3
+    grid gap-6 grid-cols-6
+    {{ include.class_names }}
+  "
+>
+  <div class="flex flex-col gap-1 col-span-full">
+    <h1
+      class="text-xl font-bold"
+      data-i18n-target="translation" data-t="stats.hp.title"
+    >
+    </h1>
+
+    <div class="flex flex-col gap-3">
+      {% include shared/big_input.html id="current_hp" label="stats.hp.current" class_names="w-2/3" %}
+      <div class="flex gap-3">
+        {% include shared/input.html id="max_hp" label="stats.hp.maximum" %}
+        {% include shared/input.html id="temporary_hp" label="stats.hp.temporary" %}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1 col-span-3 sm:col-span-4 lg:col-span-full">
+    <h1
+      class="text-xl font-bold"
+      data-i18n-target="translation" data-t="stats.hit_dice.title"
+    >
+    </h1>
+
+    <div class="flex flex-col gap-3">
+        {% include shared/big_input.html id="hit_dice" label="stats.hit_dice.label" class_names="w-2/3" %}
+      <div class="flex gap-3">
+        {% include shared/input.html id="max_hide_dice_amount" label="stats.hit_dice.maximum" %}
+        {% include shared/input.html id="spent_hit_dice_amount" label="stats.hit_dice.spent" %}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1 col-span-3 sm:col-span-2 lg:col-span-full">
+    <h1
+      class="text-xl font-bold"
+      data-i18n-target="translation" data-t="stats.death_saves.title"
+    >
+    </h1>
+    <div class="flex flex-col gap-2">
+      <h2
+        class="text-lg font-semibold"
+        data-i18n-target="translation" data-t="stats.death_saves.successes"
+      >
+      </h2>
+      <div class="flex gap-3">
+        {% include shared/toggle.html id="death_throw_success_0" states=toggle_states icons=toggle_icons %}
+        {% include shared/toggle.html id="death_throw_success_1" states=toggle_states icons=toggle_icons %}
+        {% include shared/toggle.html id="death_throw_success_2" states=toggle_states icons=toggle_icons %}
+      </div>
+    </div>
+    <div class="flex flex-col gap-1">
+      <h2
+        class="text-lg font-semibold"
+        data-i18n-target="translation" data-t="stats.death_saves.failures"
+      >
+      </h2>
+      <div class="flex gap-3">
+        {% include shared/toggle.html id="death_throw_failure_0" states=toggle_states icons=toggle_icons %}
+        {% include shared/toggle.html id="death_throw_failure_1" states=toggle_states icons=toggle_icons %}
+        {% include shared/toggle.html id="death_throw_failure_2" states=toggle_states icons=toggle_icons %}
+      </div>
+    </div>
+  </div>
+</div>

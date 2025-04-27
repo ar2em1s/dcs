@@ -1,0 +1,42 @@
+{% assign light_armor_proficiency_id = "light_armor_proficiency" %}
+{% assign medium_armor_proficiency_id = "medium_armor_proficiency" %}
+{% assign heavy_armor_proficiency_id = "heavy_armor_proficiency" %}
+{% assign shields_proficiency_id = "shields_proficiency" %}
+{% assign toggle_states = "unchecked,checked" | split: "," %}
+{% assign toggle_icons = "circle_empty,circle" | split: "," %}
+
+<div class="flex flex-col items-center gap-2 {{ include.class_names }}">
+  <h2>
+    <span data-i18n-target="translation" data-t="proficiencies.armor_training.title"></span>:
+  </h2>
+  <div class="flex flex-wrap w-full xl:w-3/4 justify-around gap-2">
+    {%
+      include shared/toggle.html
+      id=light_armor_proficiency_id
+      states=toggle_states
+      icons=toggle_icons
+      label="proficiencies.armor_training.light"
+    %}
+    {%
+      include shared/toggle.html
+      id=medium_armor_proficiency_id
+      states=toggle_states
+      icons=toggle_icons
+      label="proficiencies.armor_training.medium"
+    %}
+    {%
+      include shared/toggle.html
+      id=heavy_armor_proficiency_id
+      states=toggle_states
+      icons=toggle_icons
+      label="proficiencies.armor_training.heavy"
+    %}
+    {%
+      include shared/toggle.html
+      id=shields_proficiency_id
+      states=toggle_states
+      icons=toggle_icons
+      label="proficiencies.armor_training.shields"
+    %}
+  </div>
+</div>

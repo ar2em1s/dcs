@@ -1,0 +1,17 @@
+
+<textarea
+  id="{{ include.id }}"
+  class="
+    resize-none py-1 px-2 w-full h-full text-gray-900 bg-transparent border-2 rounded-lg border-gray-400
+    dark:text-slate-200 dark:border-gray-500 dark:focus:border-gray-200 focus:outline-none
+    focus:border-gray-800 {{ include.class_names }}
+  "
+  placeholder=" "
+  autocomplete="off"
+  aria-label="{{ include.id }}"
+  {% if include.rows %}
+    rows="{{ include.rows }}"
+  {% endif %}
+  data-state-target="input"
+  data-action="input->state#save"
+></textarea>

@@ -1,0 +1,25 @@
+<div>
+  <label
+    class="
+      text-center text-gray-900 border-2 rounded-lg border-gray-400
+    dark:text-slate-200 dark:border-gray-500 hover:border-gray-800 dark:hover:border-gray-200
+    dark:active:border-gray-200 active:border-gray-800 active:scale-90 duration-100
+      flex flex-col p-1
+      {{ include.class_names }}
+    "
+    for="{{ include.id }}"
+    data-i18n-target="translation"
+    data-t="{{ include.label }}"
+  ></label>
+  <input
+    id="{{ include.id }}"
+    type="file"
+    class="hidden"
+    focus="false"
+    aria-label="{{ include.label }}"
+    data-action="{{ include.data_action }}"
+    {% if include.data_state_target %}
+      data-state-target="{{ include.data_state_target }}"
+    {% endif %}
+  />
+</div>
