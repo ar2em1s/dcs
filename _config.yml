@@ -3,6 +3,9 @@ url: ar2em1s.github.io
 baseurl: /dcs
 github_username: ar2em1s
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - .github
   - assets/css
